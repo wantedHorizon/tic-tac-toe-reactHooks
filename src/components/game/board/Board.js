@@ -27,7 +27,8 @@ const Board = props => {
             turn: turn
         });
         setHistory(newHistory);
-    }, [turn])
+        // eslint-disable-next-line
+    }, [turn]);
 
     const getCellSineByTurn = () => {
         if (turn % 2) {

@@ -1,4 +1,4 @@
-import React, { useEffect, useRef, useState } from 'react'
+import React, { useState } from 'react'
 import { useHistory } from 'react-router-dom';
 import { Button, Checkbox, Form } from 'semantic-ui-react'
 
@@ -10,7 +10,6 @@ const FormStartGame = () => {
     const [error,setError] = useState('');
     const [checked,setChecked] = useState(false);
     const onSubmitHandler = (e) => {
-        const form = e.target;
         e.preventDefault();
         if(!player1){
             setError('Please enter player1 name');
