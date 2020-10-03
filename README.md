@@ -22,7 +22,7 @@ Board
     ]
     turn: 0-9 --on which turn are we on(history[turn])
     winner: ""/"player{1,2}"/"draw" --game over and name of the winner 
-    history: [{board:[3][3],turn:(0-9)}]
+    history: [{board:[3][3],turn:(0-9)},{board:[3][3],turn:(0-9)} ...]
 
     }
 ```
