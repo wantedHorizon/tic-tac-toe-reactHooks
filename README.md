@@ -1,4 +1,85 @@
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+
+# tic-tac-toe-
+
+## ReactJS 
+Simple tic-tac-toe game built with react hooks.
+# **State object**
+
+```
+state = {
+
+ Form
+ --------
+    player1,player2 = strings  --players name
+    checkbox= false/true --user agreement
+
+Board
+---------
+    board[3][3]: [
+        ['X','null','O],
+        ['X','null','O],
+        ['X','null','O]
+    ]
+    turn: 0-9 --on which turn are we on(history[turn])
+    winner: ""/"player{1,2}"/"draw" --game over and name of the winner history: [{board:[3][3],turn:(0-9)}]
+
+    }
+```
+
+## **Components**
+
+- **Game**
+    
+  > Holds the entire game and router
+
+- **Board**
+
+  > Manages board display,handlers and history
+
+- **History**
+  > List of all prev history options
+
+* **Cell**
+  > holds ['X' / 'O' / null] according to board state.
+
+
+
+- **Form**
+  >  On game start user must choose player1 and player2 names
+
+
+
+# Components Structure
+
+```
+    <App>
+        <Game>
+        
+
+        <Router>
+            <Route "/">
+                <Form/>
+            <Route>
+
+            <Route "/game">
+                <History />
+                <Board>
+                    {<Cell/>} * 3
+                    {<Cell/>} * 3 
+                    {<Cell/>} * 3 
+                    <button>New Game</button>
+                    <button>Main Menu</button>
+                </Board>
+            </Route>
+
+             
+        </Router>
+        </Game>
+    </App>
+}
+```
+
+<!-- ## Card Object Description -->
 
 ## Available Scripts
 
@@ -26,43 +107,3 @@ The build is minified and the filenames include the hashes.<br />
 Your app is ready to be deployed!
 
 See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `yarn eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
-
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/code-splitting
-
-### Analyzing the Bundle Size
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size
-
-### Making a Progressive Web App
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app
-
-### Advanced Configuration
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/advanced-configuration
-
-### Deployment
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/deployment
-
-### `yarn build` fails to minify
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify
